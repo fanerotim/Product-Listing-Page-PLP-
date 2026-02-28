@@ -1,4 +1,9 @@
 .nav ul {
     display: flex;
     flex-direction: row;
+    gap: .5rem;
+
+    & li:hover {
+        cursor: pointer;
+    }
 }
