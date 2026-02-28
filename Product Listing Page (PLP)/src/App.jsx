@@ -9,14 +9,14 @@ function App() {
   const [activeCategory, setActiveCategory] = useState('books');
 
   const handleChangeCategory = (category) => {
-    setActiveCategory((prev) => category);
+    setActiveCategory(category);
   }
 
   return (
     <>
       <div className={styles.app__container}>
-        <Header handleChangeCategory={handleChangeCategory}/>
-        <ProductPage activeCategory={activeCategory}/>
+        <Header handleChangeCategory={handleChangeCategory} />
+        <ProductPage activeCategory={activeCategory} />
         <Footer />
       </div>
     </>

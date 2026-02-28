@@ -4,7 +4,8 @@
 //     name: '',
 //     description: '',
 //     price: '',
-//     rating: ''
+//     rating: '',
+//     discount: ''
 // }
 
 export const database = [

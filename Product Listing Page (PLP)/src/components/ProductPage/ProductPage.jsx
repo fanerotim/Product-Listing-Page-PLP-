@@ -1,4 +1,4 @@
-export const ProductPage = ({activeCategory}) => {
+export const ProductPage = ({ activeCategory }) => {
     return (
         <>
             <h1>This is my product page</h1>
