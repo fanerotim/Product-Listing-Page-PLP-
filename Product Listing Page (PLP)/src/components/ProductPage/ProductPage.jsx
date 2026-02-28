@@ -1,6 +1,8 @@
 import styles from './ProductPage.module.scss';
 import { database } from "../../../database/database";
-import { ProductItem } from "./ProductItem/ProductItem";
+import { ProductItem } from "./components/ProductItem/ProductItem";
+import {Filter} from './components/Filter/Filter';
+import {Sort} from './components/Sort/Sort';
 
 export const ProductPage = ({ activeCategory }) => {
 
