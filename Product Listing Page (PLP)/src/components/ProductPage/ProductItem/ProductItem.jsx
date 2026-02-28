@@ -1,16 +1,16 @@
 import styles from './ProductItem.module.scss';
-import { CiStar} from 'react-icons/ci';
+import { CiStar } from 'react-icons/ci';
 
 export const ProductItem = ({ product }) => {
 
-    const { imageUrl, description, name, price, rating } = product;
+    const { imageUrl, description, name, price, rating, discount } = product;
 
     return (
         <article className={styles.product__card}>
             <img
                 className={styles.product__card__image}
                 src={imageUrl}
-                alt={description} />
+                alt={name} />
             <p
                 className={styles.product__card__name}
             >
@@ -21,20 +21,39 @@ export const ProductItem = ({ product }) => {
             >
                 {description}
             </p>
-            <p
-                className={styles.product__card__price}
-            >
-                {price}
-            </p>
+
+            {discount
+                ?
+                <>
+                    <p
+                        className={`${styles.product__card__price} ${styles.product__card__discounted}`}
+                    >
+                        {price.toFixed(2)}€
+                    </p>
+
+                    <p
+                        className={styles.product__card__price}
+                    >
+                        {(price * 0.8).toFixed(2)}€
+                    </p>
+                </>
+                :
+                <p
+                    className={styles.product__card__price}
+                >
+                    {price.toFixed(2)}€
+                </p>
+            }
+
             <p
                 className={styles.product__card__rating}
             >
-                {rating.map((i) => {
-                    return <CiStar/>
-                })}
+                {rating.map((_, i) => (
+                    <CiStar key={i} />
+                ))}
             </p>
 
-            <button>
+            <button className={styles.product__card__add__to__cart__btn}>
                 Add to cart
             </button>
         </article>
