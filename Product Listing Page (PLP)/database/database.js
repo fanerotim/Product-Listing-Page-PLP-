@@ -1,7 +1,7 @@
 export const database = [{
     id: 1,
     category: 'books',
-    description: '',
+    description: `Discover a wide selection of books across classics, history, psychology, art, sports, and more. Whether you're looking for timeless literature or modern insights, explore stories and knowledge in multiple languages.`,
     items: [{
         id: 1,
         imageUrl: 'https://covers.openlibrary.org/b/id/8231856-L.jpg',
@@ -246,7 +246,7 @@ export const database = [{
 {
     id: 2,
     category: 'magazines',
-    description: '',
+    description: `Browse our collection of magazines covering current events, culture, sports, psychology, and the arts. Stay informed and inspired with fresh perspectives from around the world.`,
     items: [{
         id: 1,
         imageUrl: 'https://covers.openlibrary.org/b/id/240727-L.jpg',
@@ -491,7 +491,7 @@ export const database = [{
 {
     id: 3,
     category: 'dictionaries',
-    description: '',
+    description: `Explore comprehensive dictionaries designed to expand your vocabulary and deepen your understanding. From language references to specialized terminology, find the right resource for every need.`,
     items: [{
         id: 1,
         imageUrl: 'https://covers.openlibrary.org/b/id/5546156-L.jpg',
