@@ -1,8 +1,10 @@
 import styles from './ProductPage.module.scss';
 import { database } from "../../../database/database";
+
 import { ProductItem } from "./components/ProductItem/ProductItem";
 import { Filter } from './components/Filter/Filter';
 import { Sort } from './components/Sort/Sort';
+import { ProductCounter } from './components/ProductCounter/ProductCounter';
 
 export const ProductPage = ({ activeCategory }) => {
 
@@ -18,10 +20,16 @@ export const ProductPage = ({ activeCategory }) => {
             </article>
 
             <article
+                className={styles.product__page__product__counter__container}
+            >
+                <ProductCounter />
+            </article>
+
+            <article
                 className={styles.product__page__category__description__container}
             >
                 <h1>{activeCategory}</h1>
-                <h2>{products[0].description}</h2>
+                <p>{products[0].description}</p>
             </article>
 
             <article
@@ -38,7 +46,7 @@ export const ProductPage = ({ activeCategory }) => {
                 })}
             </div>
 
-            <div 
+            <div
                 className={styles.product__page__load__more__btn}
             >
                 <button>Load more</button>
