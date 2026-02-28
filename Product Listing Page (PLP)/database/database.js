@@ -1,13 +1,3 @@
-// product / item structure 
-// {
-//     image: '',
-//     name: '',
-//     description: '',
-//     price: '',
-//     rating: '',
-//     discount: ''
-// }
-
 export const database = [{
     id: 1,
     category: 'books',
@@ -19,7 +9,7 @@ export const database = [{
         author: 'Fyodor Dostoevsky',
         description: 'A psychological drama exploring morality, guilt, and redemption in Saint Petersburg.',
         price: 9.99,
-        rating: 5,
+        rating: [1, 1, 1, 1, 1],
         discount: false,
         lang: 'EN',
         genre: 'classics'
@@ -31,7 +21,7 @@ export const database = [{
         author: 'Fyodor Dostoevsky',
         description: 'A philosophical novel about faith, doubt, and free will.',
         price: 12.50,
-        rating: 5,
+        rating: [1, 1, 1, 1, 1],
         discount: true,
         lang: 'EN',
         genre: 'classics'
@@ -43,7 +33,7 @@ export const database = [{
         author: 'James Clear',
         description: 'A practical guide to building good habits and breaking bad ones.',
         price: 11.20,
-        rating: 5,
+        rating: [1, 1, 1, 1, 1],
         discount: true,
         lang: 'EN',
         genre: 'psychology'
@@ -55,7 +45,7 @@ export const database = [{
         author: 'Sun Tzu',
         description: 'An ancient Chinese treatise on military strategy and tactics.',
         price: 6.99,
-        rating: 4,
+        rating: [1, 1, 1, 1],
         discount: false,
         lang: 'EN',
         genre: 'history'
@@ -67,7 +57,7 @@ export const database = [{
         author: 'J.R.R. Tolkien',
         description: 'A fantasy adventure about Bilbo Baggins and his unexpected journey.',
         price: 8.99,
-        rating: 5,
+        rating: [1, 1, 1, 1, 1],
         discount: true,
         lang: 'EN',
         genre: 'classics'
@@ -79,7 +69,7 @@ export const database = [{
         author: 'Иван Вазов',
         description: 'Класически български роман за живота по време на османското владичество.',
         price: 7.80,
-        rating: 5,
+        rating: [1, 1, 1, 1, 1],
         discount: false,
         lang: 'BG',
         genre: 'classics'
@@ -91,7 +81,7 @@ export const database = [{
         author: 'Алеко Константинов',
         description: 'Сатиричен роман, описващ приключенията на Бай Ганьо.',
         price: 6.40,
-        rating: 4,
+        rating: [1, 1, 1, 1],
         discount: true,
         lang: 'BG',
         genre: 'humour'
@@ -103,7 +93,7 @@ export const database = [{
         author: 'Паисий Хилендарски',
         description: 'Произведение, събудило българското национално съзнание.',
         price: 9.10,
-        rating: 5,
+        rating: [1, 1, 1, 1, 1],
         discount: false,
         lang: 'BG',
         genre: 'history'
@@ -115,7 +105,7 @@ export const database = [{
         author: 'Димитър Талев',
         description: 'Роман за българското възраждане и борбата за църковна независимост.',
         price: 8.60,
-        rating: 4,
+        rating: [1, 1, 1, 1],
         discount: true,
         lang: 'BG',
         genre: 'classics'
@@ -127,7 +117,7 @@ export const database = [{
         author: 'Иван Петров',
         description: 'Книга за личностно развитие и изграждане на успешни навици.',
         price: 10.50,
-        rating: 3,
+        rating: [1, 1, 1],
         discount: false,
         lang: 'BG',
         genre: 'psychology'
@@ -139,7 +129,7 @@ export const database = [{
         author: 'Miguel de Cervantes',
         description: 'Un roman satirique sur un noble obsédé par la chevalerie.',
         price: 10.99,
-        rating: 5,
+        rating: [1, 1, 1, 1, 1],
         discount: true,
         lang: 'FR',
         genre: 'classics'
@@ -151,7 +141,7 @@ export const database = [{
         author: 'Antoine de Saint-Exupéry',
         description: 'Un conte poétique et philosophique pour petits et grands.',
         price: 7.40,
-        rating: 5,
+        rating: [1, 1, 1, 1, 1],
         discount: false,
         lang: 'FR',
         genre: 'classics'
@@ -163,7 +153,7 @@ export const database = [{
         author: 'Albert Camus',
         description: 'Un roman existentialiste sur l’absurdité de la vie.',
         price: 8.20,
-        rating: 4,
+        rating: [1, 1, 1, 1],
         discount: true,
         lang: 'FR',
         genre: 'classics'
@@ -175,7 +165,7 @@ export const database = [{
         author: 'Claire Dubois',
         description: 'Une introduction accessible à l’histoire de l’art moderne.',
         price: 15.60,
-        rating: 3,
+        rating: [1, 1, 1],
         discount: false,
         lang: 'FR',
         genre: 'art'
@@ -187,7 +177,7 @@ export const database = [{
         author: 'Jean Martin',
         description: 'Un guide pratique pour développer une mentalité positive.',
         price: 9.30,
-        rating: 4,
+        rating: [1, 1, 1, 1],
         discount: true,
         lang: 'FR',
         genre: 'psychology'
@@ -199,7 +189,7 @@ export const database = [{
         author: 'Cal Newport',
         description: 'Rules for focused success in a distracted world.',
         price: 13.99,
-        rating: 5,
+        rating: [1, 1, 1, 1, 1],
         discount: false,
         lang: 'EN',
         genre: 'psychology'
@@ -211,7 +201,7 @@ export const database = [{
         author: 'Mary Beard',
         description: 'A detailed history of ancient Rome.',
         price: 14.20,
-        rating: 4,
+        rating: [1, 1, 1, 1],
         discount: true,
         lang: 'EN',
         genre: 'history'
@@ -223,7 +213,7 @@ export const database = [{
         author: 'Георги Иванов',
         description: 'Книга за психическата подготовка в спорта.',
         price: 11.00,
-        rating: 4,
+        rating: [1, 1, 1, 1],
         discount: false,
         lang: 'BG',
         genre: 'sports'
@@ -235,7 +225,7 @@ export const database = [{
         author: 'John Smith',
         description: 'Exploring the science and craft of comedy.',
         price: 8.50,
-        rating: 3,
+        rating: [1, 1, 1, 1],
         discount: true,
         lang: 'EN',
         genre: 'humour'
@@ -247,7 +237,7 @@ export const database = [{
         author: 'Pierre Laurent',
         description: 'Une exploration de l’histoire du sport en Europe.',
         price: 12.10,
-        rating: 4,
+        rating: [1, 1, 1, 1],
         discount: false,
         lang: 'FR',
         genre: 'sports'
@@ -264,7 +254,7 @@ export const database = [{
         author: 'National Geographic Society',
         description: 'A magazine featuring science, geography, history, and world culture.',
         price: 5.99,
-        rating: 5,
+        rating: [1, 1, 1, 1, 1],
         discount: false,
         lang: 'EN',
         genre: 'history'
@@ -276,7 +266,7 @@ export const database = [{
         author: 'Time USA LLC',
         description: 'Weekly magazine covering politics, current events, and culture.',
         price: 4.50,
-        rating: 4,
+        rating: [1, 1, 1, 1],
         discount: true,
         lang: 'EN',
         genre: 'history'
@@ -288,7 +278,7 @@ export const database = [{
         author: 'The Arena Group',
         description: 'Magazine focused on sports news and athlete features.',
         price: 6.20,
-        rating: 4,
+        rating: [1, 1, 1, 1],
         discount: false,
         lang: 'EN',
         genre: 'sports'
@@ -300,7 +290,7 @@ export const database = [{
         author: 'Sussex Publishers',
         description: 'Magazine dedicated to psychology and human behavior.',
         price: 7.00,
-        rating: 5,
+        rating: [1, 1, 1, 1, 1],
         discount: true,
         lang: 'EN',
         genre: 'psychology'
@@ -312,7 +302,7 @@ export const database = [{
         author: 'ArtReview Ltd',
         description: 'Contemporary art magazine covering global exhibitions.',
         price: 8.90,
-        rating: 3,
+        rating: [1, 1, 1],
         discount: false,
         lang: 'EN',
         genre: 'art'
@@ -324,7 +314,7 @@ export const database = [{
         author: 'История ООД',
         description: 'Списание, посветено на българската и световната история.',
         price: 4.80,
-        rating: 5,
+        rating: [1, 1, 1, 1, 1],
         discount: true,
         lang: 'BG',
         genre: 'history'
@@ -336,7 +326,7 @@ export const database = [{
         author: 'Медия Груп',
         description: 'Списание за спорт, фитнес и активен начин на живот.',
         price: 3.90,
-        rating: 4,
+        rating: [1, 1, 1, 1],
         discount: false,
         lang: 'BG',
         genre: 'sports'
@@ -348,7 +338,7 @@ export const database = [{
         author: 'Психология БГ',
         description: 'Актуални теми за личностно развитие и психично здраве.',
         price: 5.20,
-        rating: 4,
+        rating: [1, 1, 1, 1],
         discount: true,
         lang: 'BG',
         genre: 'psychology'
@@ -360,7 +350,7 @@ export const database = [{
         author: 'Културен център',
         description: 'Списание за съвременно и класическо изкуство.',
         price: 6.10,
-        rating: 3,
+        rating: [1, 1, 1],
         discount: false,
         lang: 'BG',
         genre: 'art'
@@ -372,7 +362,7 @@ export const database = [{
         author: 'Весела преса',
         description: 'Сатирично списание с карикатури и коментари.',
         price: 3.50,
-        rating: 2,
+        rating: [1, 1],
         discount: true,
         lang: 'BG',
         genre: 'humour'
@@ -384,7 +374,7 @@ export const database = [{
         author: 'Le Monde',
         description: 'Magazine français d’analyse politique et sociale.',
         price: 6.40,
-        rating: 5,
+        rating: [1, 1, 1, 1, 1],
         discount: false,
         lang: 'FR',
         genre: 'history'
@@ -396,7 +386,7 @@ export const database = [{
         author: 'Groupe Amaury',
         description: 'Magazine sportif avec interviews et reportages exclusifs.',
         price: 5.60,
-        rating: 4,
+        rating: [1, 1, 1, 1],
         discount: true,
         lang: 'FR',
         genre: 'sports'
@@ -408,7 +398,7 @@ export const database = [{
         author: 'Reworld Media',
         description: 'Magazine dédié au bien-être et au développement personnel.',
         price: 6.80,
-        rating: 4,
+        rating: [1, 1, 1, 1],
         discount: false,
         lang: 'FR',
         genre: 'psychology'
@@ -420,7 +410,7 @@ export const database = [{
         author: 'Beaux Arts & Cie',
         description: 'Magazine sur l’art classique et contemporain.',
         price: 7.90,
-        rating: 3,
+        rating: [1, 1, 1],
         discount: true,
         lang: 'FR',
         genre: 'art'
@@ -432,7 +422,7 @@ export const database = [{
         author: 'Rire Éditions',
         description: 'Magazine satirique avec caricatures et bandes dessinées.',
         price: 4.30,
-        rating: 2,
+        rating: [1, 1],
         discount: false,
         lang: 'FR',
         genre: 'humour'
@@ -444,7 +434,7 @@ export const database = [{
         author: 'Global Media',
         description: 'In-depth historical analysis and discoveries.',
         price: 6.70,
-        rating: 4,
+        rating: [1, 1, 1, 1],
         discount: false,
         lang: 'EN',
         genre: 'history'
@@ -456,7 +446,7 @@ export const database = [{
         author: 'Creative Studio',
         description: 'Modern art, architecture, and creative trends.',
         price: 8.00,
-        rating: 5,
+        rating: [1, 1, 1, 1, 1],
         discount: true,
         lang: 'EN',
         genre: 'art'
@@ -468,7 +458,7 @@ export const database = [{
         author: 'БГ Медия',
         description: 'Новини и анализи от света на спорта.',
         price: 4.20,
-        rating: 3,
+        rating: [1, 1, 1],
         discount: false,
         lang: 'BG',
         genre: 'sports'
@@ -480,7 +470,7 @@ export const database = [{
         author: 'Paris Éditions',
         description: 'Magazine sur les tendances actuelles du sport.',
         price: 6.00,
-        rating: 4,
+        rating: [1, 1, 1, 1],
         discount: true,
         lang: 'FR',
         genre: 'sports'
@@ -492,7 +482,7 @@ export const database = [{
         author: 'Science Press',
         description: 'Exploring neuroscience and human psychology.',
         price: 7.10,
-        rating: 5,
+        rating: [1, 1, 1, 1, 1],
         discount: false,
         lang: 'EN',
         genre: 'psychology'
@@ -509,7 +499,7 @@ export const database = [{
         author: 'Oxford University Press',
         description: 'Comprehensive dictionary of the English language with definitions and etymology.',
         price: 24.99,
-        rating: 5,
+        rating: [1, 1, 1, 1, 1],
         discount: false,
         lang: 'EN',
         genre: 'classics'
@@ -521,7 +511,7 @@ export const database = [{
         author: 'Merriam-Webster',
         description: 'Authoritative and up-to-date dictionary for English learners.',
         price: 19.50,
-        rating: 4,
+        rating: [1, 1, 1, 1],
         discount: true,
         lang: 'EN',
         genre: 'classics'
@@ -533,7 +523,7 @@ export const database = [{
         author: 'Collins',
         description: 'Dictionary focused on synonyms and antonyms for better writing.',
         price: 14.20,
-        rating: 4,
+        rating: [1, 1, 1, 1],
         discount: false,
         lang: 'EN',
         genre: 'psychology'
@@ -545,7 +535,7 @@ export const database = [{
         author: 'Art Media Press',
         description: 'Reference guide for art terminology and artistic movements.',
         price: 17.80,
-        rating: 3,
+        rating: [1, 1, 1],
         discount: true,
         lang: 'EN',
         genre: 'art'
@@ -557,7 +547,7 @@ export const database = [{
         author: 'Global Sports Media',
         description: 'Dictionary explaining terminology used in various sports.',
         price: 16.40,
-        rating: 3,
+        rating: [1, 1, 1],
         discount: false,
         lang: 'EN',
         genre: 'sports'
@@ -569,7 +559,7 @@ export const database = [{
         author: 'БАН',
         description: 'Официален тълковен речник на съвременния български език.',
         price: 21.30,
-        rating: 5,
+        rating: [1, 1, 1, 1, 1],
         discount: false,
         lang: 'BG',
         genre: 'classics'
@@ -581,7 +571,7 @@ export const database = [{
         author: 'Просвета',
         description: 'Двуезичен речник с преводи и примери за употреба.',
         price: 18.60,
-        rating: 4,
+        rating: [1, 1, 1, 1],
         discount: true,
         lang: 'BG',
         genre: 'classics'
@@ -593,7 +583,7 @@ export const database = [{
         author: 'Наука и изкуство',
         description: 'Обяснения на чуждици и заемки в българския език.',
         price: 15.00,
-        rating: 4,
+        rating: [1, 1, 1, 1],
         discount: false,
         lang: 'BG',
         genre: 'history'
@@ -605,7 +595,7 @@ export const database = [{
         author: 'Медицинска преса',
         description: 'Речник на основните термини в психологията.',
         price: 13.70,
-        rating: 3,
+        rating: [1, 1, 1],
         discount: true,
         lang: 'BG',
         genre: 'psychology'
@@ -617,7 +607,7 @@ export const database = [{
         author: 'Спорт БГ',
         description: 'Термини и понятия от различни видове спорт.',
         price: 12.40,
-        rating: 2,
+        rating: [1, 1],
         discount: false,
         lang: 'BG',
         genre: 'sports'
@@ -629,7 +619,7 @@ export const database = [{
         author: 'Larousse',
         description: 'Dictionnaire encyclopédique de la langue française.',
         price: 23.90,
-        rating: 5,
+        rating: [1, 1, 1, 1, 1],
         discount: true,
         lang: 'FR',
         genre: 'classics'
@@ -641,7 +631,7 @@ export const database = [{
         author: 'Hachette',
         description: 'Dictionnaire bilingue pour étudiants et professionnels.',
         price: 19.80,
-        rating: 4,
+        rating: [1, 1, 1, 1],
         discount: false,
         lang: 'FR',
         genre: 'classics'
@@ -653,7 +643,7 @@ export const database = [{
         author: 'Éditions Robert',
         description: 'Guide complet des synonymes et nuances en français.',
         price: 16.50,
-        rating: 4,
+        rating: [1, 1, 1, 1],
         discount: true,
         lang: 'FR',
         genre: 'psychology'
@@ -665,7 +655,7 @@ export const database = [{
         author: 'Paris Éditions',
         description: 'Référence pour les termes liés à l’art et à l’esthétique.',
         price: 18.30,
-        rating: 3,
+        rating: [1, 1, 1],
         discount: false,
         lang: 'FR',
         genre: 'art'
@@ -677,7 +667,7 @@ export const database = [{
         author: 'Sport France',
         description: 'Termes et expressions utilisés dans le sport moderne.',
         price: 14.60,
-        rating: 3,
+        rating: [1, 1, 1],
         discount: true,
         lang: 'FR',
         genre: 'sports'
@@ -689,7 +679,7 @@ export const database = [{
         author: 'Oxford Press',
         description: 'Collection of common English idioms and expressions.',
         price: 13.90,
-        rating: 4,
+        rating: [1, 1, 1, 1],
         discount: false,
         lang: 'EN',
         genre: 'humour'
@@ -701,7 +691,7 @@ export const database = [{
         author: 'Просвета',
         description: 'Официални правила за правопис и пунктуация.',
         price: 17.20,
-        rating: 5,
+        rating: [1, 1, 1, 1, 1],
         discount: true,
         lang: 'BG',
         genre: 'classics'
@@ -713,7 +703,7 @@ export const database = [{
         author: 'Université de Paris',
         description: 'Dictionnaire spécialisé dans les termes historiques.',
         price: 20.40,
-        rating: 4,
+        rating: [1, 1, 1, 1],
         discount: false,
         lang: 'FR',
         genre: 'history'
@@ -725,7 +715,7 @@ export const database = [{
         author: 'Cambridge',
         description: 'Essential vocabulary for business and finance.',
         price: 18.90,
-        rating: 4,
+        rating: [1, 1, 1, 1],
         discount: true,
         lang: 'EN',
         genre: 'history'
@@ -737,7 +727,7 @@ export const database = [{
         author: 'Весела книга',
         description: 'Сборник от забавни и хумористични изрази.',
         price: 11.50,
-        rating: 2,
+        rating: [1, 1],
         discount: false,
         lang: 'BG',
         genre: 'humour'
