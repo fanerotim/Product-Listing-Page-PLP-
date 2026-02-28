@@ -1,22 +1,49 @@
 import styles from './ProductPage.module.scss';
 import { database } from "../../../database/database";
 import { ProductItem } from "./components/ProductItem/ProductItem";
-import {Filter} from './components/Filter/Filter';
-import {Sort} from './components/Sort/Sort';
+import { Filter } from './components/Filter/Filter';
+import { Sort } from './components/Sort/Sort';
 
 export const ProductPage = ({ activeCategory }) => {
 
     const products = database.filter((p) => p.category === activeCategory);
 
     return (
-        <div className={styles.page__wrapper}>
-            <ul>
+
+        <div className={styles.product__page__wrapper}>
+
+            <article
+                className={styles.product__page__filter__container}>
+                <Filter />
+            </article>
+
+            <article
+                className={styles.product__page__category__description__container}
+            >
+                <h1>{activeCategory}</h1>
+                <h2>{products[0].description}</h2>
+            </article>
+
+            <article
+                className={styles.product__page__sort__container}
+            >
+                <Sort />
+            </article>
+
+            <div className={styles.product__page__product__container}>
                 {products[0].items.map((p) => {
                     return (
                         <ProductItem key={p.id} product={p} />
                     )
                 })}
-            </ul>
+            </div>
+
+            <div 
+                className={styles.product__page__load__more__btn}
+            >
+                <button>Load more</button>
+            </div>
+
         </div>
     )
 }
