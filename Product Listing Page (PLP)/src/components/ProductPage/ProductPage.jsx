@@ -6,11 +6,13 @@ import { Filter } from './components/Filter/Filter';
 import { Sort } from './components/Sort/Sort';
 import { ProductCounter } from './components/ProductCounter/ProductCounter';
 import { useSortCriteria } from './components/hooks/useSortCriteria';
+import { useSortItems } from './components/hooks/useSortItems';
 
 export const ProductPage = ({ activeCategory }) => {
 
     const products = database.filter((p) => p.category === activeCategory);
     const { sortValue, sortValueHandler } = useSortCriteria();
+    const sortedItems = useSortItems(sortValue, products[0].items);
 
     return (
 
@@ -41,7 +43,7 @@ export const ProductPage = ({ activeCategory }) => {
             </article>
 
             <div className={styles.product__page__product__container}>
-                {products[0].items.map((p) => {
+                {sortedItems.map((p) => {
                     return (
                         <ProductItem key={p.id} product={p} />
                     )
