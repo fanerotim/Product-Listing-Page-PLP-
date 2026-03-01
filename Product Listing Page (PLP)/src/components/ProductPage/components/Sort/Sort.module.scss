@@ -39,7 +39,7 @@
     opacity: 1;
     height: 150px;
     visibility: visible;
-    transition: opacity .2s visibility .3s height .2s;
+    transition: opacity .2s, visibility .3s, height .2s;
 }
 
 .down__arrow {
@@ -57,5 +57,9 @@
 .dropdown__option {
     &:hover {
         background-color: rgb(231, 231, 231);
+    }
+
+    &__selected {
+        background-color: rgb(219, 211, 211);
     }
 }
