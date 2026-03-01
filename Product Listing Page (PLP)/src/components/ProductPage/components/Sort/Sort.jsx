@@ -9,7 +9,9 @@ export const Sort = ({ sortValue, sortValueHandler }) => {
     const sortObject = sortCriteria.find((obj) => obj.value === sortValue);
 
     return (
-        <div>
+        <div
+            className={styles.sort__element__container}
+        >
 
             <p>Sort by</p>
             <article
