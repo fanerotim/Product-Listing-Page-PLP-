@@ -1,4 +1,4 @@
-export const useSortProducts = (sortValue, items) => {
+export const useSortItems = (sortValue, items) => {
 
     const itemsToSorted = items.slice(0);
     let sortedItems = [];
@@ -20,5 +20,5 @@ export const useSortProducts = (sortValue, items) => {
             return items;
     }
 
-    return sortedProducts;
+    return sortedItems;
 }
