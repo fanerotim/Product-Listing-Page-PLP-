@@ -1,11 +1,10 @@
 import styles from './Sort.module.scss';
-import { useSortElementBehavior } from './hooks/useSortElementBehavior';
+import { useSortDropdownBehavior } from './hooks/useSortDropdownBehavior';
 import { sortCriteria } from './utils/sortCriteria';
 
-export const Sort = () => {
+export const Sort = ({ sortOption, sortOptionHandler }) => {
 
-    const { isDropdownOpen, dropdownHandler } = useSortElementBehavior();
-
+    const { isDropdownOpen, dropdownHandler } = useSortDropdownBehavior();
 
     return (
         <div>
@@ -15,7 +14,7 @@ export const Sort = () => {
                 className={styles.sort__option__container}
             >
                 <p>
-                    Select an option
+                    {sortOption}
                 </p>
                 {
                     isDropdownOpen
@@ -34,8 +33,13 @@ export const Sort = () => {
                 {sortCriteria.map((c) => (
                     <p
                         key={c.id}
-                        className={styles.dropdown__option}
-                        onClick={dropdownHandler}
+                        className={`
+                            ${styles.dropdown__option} 
+                            ${sortOption === c.criteria ? styles.dropdown__option__selected : ''}`}
+                        onClick={() => {
+                            dropdownHandler();
+                            sortOptionHandler(c.criteria);
+                        }}
                     >
                         {c.criteria}
                     </p>
