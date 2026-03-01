@@ -2,19 +2,22 @@ import styles from './Sort.module.scss';
 import { useSortDropdownBehavior } from './hooks/useSortDropdownBehavior';
 import { sortCriteria } from './utils/sortCriteria';
 
-export const Sort = ({ sortOption, sortOptionHandler }) => {
+export const Sort = ({ sortValue, sortValueHandler }) => {
 
     const { isDropdownOpen, dropdownHandler } = useSortDropdownBehavior();
+    // I want to get sort label to display as selected option in dropdown
+    const sortObject = sortCriteria.find((obj) => obj.value === sortValue);
 
     return (
         <div>
+
             <p>Sort by</p>
             <article
                 onClick={dropdownHandler}
                 className={styles.sort__option__container}
             >
                 <p>
-                    {sortOption}
+                    {sortObject.label}
                 </p>
                 {
                     isDropdownOpen
@@ -22,7 +25,6 @@ export const Sort = ({ sortOption, sortOptionHandler }) => {
                         : (<span className={styles.up__arrow}></span>)
                 }
             </article>
-
 
             <div
                 className={
@@ -35,13 +37,13 @@ export const Sort = ({ sortOption, sortOptionHandler }) => {
                         key={c.id}
                         className={`
                             ${styles.dropdown__option} 
-                            ${sortOption === c.criteria ? styles.dropdown__option__selected : ''}`}
+                            ${sortValue === c.value ? styles.dropdown__option__selected : ''}`}
                         onClick={() => {
                             dropdownHandler();
-                            sortOptionHandler(c.criteria);
+                            sortValueHandler(c.value);
                         }}
                     >
-                        {c.criteria}
+                        {c.label}
                     </p>
                 ))}
             </div>
