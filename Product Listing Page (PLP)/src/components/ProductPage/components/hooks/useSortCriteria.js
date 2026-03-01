@@ -1,14 +1,14 @@
 import { useState } from "react";
 
 export const useSortCriteria = () => {
-    const [sortOption, setSortOption] = useState('Alphabetical (A-Z)');
+    const [sortValue, setSortValue] = useState('alphabetical-ascending');
 
-    const sortOptionHandler = (value) => {
-        setSortOption(value);
+    const sortValueHandler = (value) => {
+        setSortValue(value);
     }
 
     return {
-        sortOption,
-        sortOptionHandler
+        sortValue,
+        sortValueHandler
     }
 }
