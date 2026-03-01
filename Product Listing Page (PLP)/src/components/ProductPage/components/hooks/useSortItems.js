@@ -22,5 +22,5 @@ export const useSortItems = (sortValue, items) => {
             return sortedItems;
     }
 
-    return sortedItems;
+    return itemsToSort;
 }
