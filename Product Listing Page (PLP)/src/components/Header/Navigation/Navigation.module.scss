@@ -3,6 +3,10 @@
     flex-direction: row;
     gap: .5rem;
 
+    & li {
+        text-transform: capitalize;
+    }
+
     & li:hover {
         cursor: pointer;
     }

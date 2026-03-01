@@ -5,10 +5,12 @@ import { ProductItem } from "./components/ProductItem/ProductItem";
 import { Filter } from './components/Filter/Filter';
 import { Sort } from './components/Sort/Sort';
 import { ProductCounter } from './components/ProductCounter/ProductCounter';
+import { useSortCriteria } from './components/hooks/useSortCriteria';
 
 export const ProductPage = ({ activeCategory }) => {
 
     const products = database.filter((p) => p.category === activeCategory);
+    const { sortOption, sortOptionHandler } = useSortCriteria();
 
     return (
 
@@ -35,7 +37,7 @@ export const ProductPage = ({ activeCategory }) => {
             <article
                 className={styles.product__page__sort__container}
             >
-                <Sort />
+                <Sort sortOption={sortOption} sortOptionHandler={sortOptionHandler} />
             </article>
 
             <div className={styles.product__page__product__container}>
