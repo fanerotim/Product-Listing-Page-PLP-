@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export const useSortCriteria = () => {
+export const useSortState = () => {
     const [sortValue, setSortValue] = useState('alphabetical-ascending');
 
     const sortValueHandler = (value) => {

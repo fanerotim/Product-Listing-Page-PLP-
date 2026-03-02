@@ -5,14 +5,14 @@ import { ProductItem } from "./components/ProductItem/ProductItem";
 import { Filter } from './components/Filter/Filter';
 import { Sort } from './components/Sort/Sort';
 import { ProductCounter } from './components/ProductCounter/ProductCounter';
-import { useSortCriteria } from './components/hooks/useSortCriteria';
+import { useSortState } from './components/hooks/useSortState';
 import { useSortItems } from './components/hooks/useSortItems';
 import { useFilterState } from './components/hooks/useFilterState';
 
 export const ProductPage = ({ activeCategory }) => {
 
     const products = database.filter((p) => p.category === activeCategory);
-    const { sortValue, sortValueHandler } = useSortCriteria();
+    const { sortValue, sortValueHandler } = useSortState();
     const sortedItems = useSortItems(sortValue, products[0].items);
     const { filterState, filterStateHandler } = useFilterState();
 
