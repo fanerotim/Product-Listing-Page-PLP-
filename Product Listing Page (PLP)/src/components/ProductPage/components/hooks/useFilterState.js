@@ -14,8 +14,13 @@ export const useFilterState = () => {
         })
     }
 
+    const clearFiltersHandler = () => {
+        setFilterState(initialState);
+    }
+
     return {
         filterState,
-        filterStateHandler
+        filterStateHandler,
+        clearFiltersHandler
     }
 }

@@ -15,7 +15,7 @@ export const ProductPage = ({ activeCategory }) => {
 
     const products = database.filter((p) => p.category === activeCategory);
 
-    const { filterState, filterStateHandler } = useFilterState();
+    const { filterState, filterStateHandler, clearFiltersHandler } = useFilterState();
     const filteredItems = useFilterItems(filterState, products[0].items);
 
     const { sortValue, sortValueHandler } = useSortState();
@@ -27,7 +27,11 @@ export const ProductPage = ({ activeCategory }) => {
 
             <article
                 className={styles.product__page__filter__container}>
-                <Filter filterState={filterState} filterStateHandler={filterStateHandler} />
+                <Filter 
+                    filterState={filterState} 
+                    filterStateHandler={filterStateHandler} 
+                    clearFiltersHandler={clearFiltersHandler}    
+                />
             </article>
 
             <article
@@ -59,7 +63,13 @@ export const ProductPage = ({ activeCategory }) => {
                             )
                         })
                         :
-                        <h1>No items found!</h1>
+                        <div 
+                            className={styles.product__page__product__container__no__match__container}
+                        >
+                            <h1>
+                                No items found!
+                            </h1>
+                        </div>
                 }
             </div>
 

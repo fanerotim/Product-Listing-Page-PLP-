@@ -1,14 +1,14 @@
 import styles from './Filter.module.scss';
 import { filterOptions } from './utils/filterOptions';
 
-export const Filter = ({ filterState, filterStateHandler }) => {
+export const Filter = ({ filterState, filterStateHandler, clearFiltersHandler }) => {
 
     // TODO: consider adding aria-pressed attribute
     return (
         <>
             <h3>Filter</h3>
             <div
-                className={styles.filter__container}
+            // className={styles.filter__container}
             >
                 {filterOptions.map((filter) => (
                     <article
@@ -36,10 +36,18 @@ export const Filter = ({ filterState, filterStateHandler }) => {
                                     {option.label}
                                 </button>
                             ))}
+
                         </div>
 
                     </article>
                 ))}
+
+                <button
+                    onClick={clearFiltersHandler}
+                    className={styles.clear__filters__btn}
+                >
+                    Reset filters
+                </button>
 
             </div>
         </>
