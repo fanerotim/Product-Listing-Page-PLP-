@@ -85,3 +85,10 @@ export const filterOptions = [
         ]
     }
 ]
+
+export const initialState = {
+    rating: null,
+    discount: null,
+    language: null,
+    genre: null
+}
