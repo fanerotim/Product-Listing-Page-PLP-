@@ -11,7 +11,7 @@ export const database = [{
         price: 9.99,
         rating: [1, 1, 1, 1, 1],
         discount: false,
-        lang: 'EN',
+        language: 'EN',
         genre: 'classics'
     },
     {
@@ -23,7 +23,7 @@ export const database = [{
         price: 12.50,
         rating: [1, 1, 1, 1, 1],
         discount: true,
-        lang: 'EN',
+        language: 'EN',
         genre: 'classics'
     },
     {
@@ -35,7 +35,7 @@ export const database = [{
         price: 11.20,
         rating: [1, 1, 1, 1, 1],
         discount: true,
-        lang: 'EN',
+        language: 'EN',
         genre: 'psychology'
     },
     {
@@ -47,7 +47,7 @@ export const database = [{
         price: 6.99,
         rating: [1, 1, 1, 1],
         discount: false,
-        lang: 'EN',
+        language: 'EN',
         genre: 'history'
     },
     {
@@ -59,7 +59,7 @@ export const database = [{
         price: 8.99,
         rating: [1, 1, 1, 1, 1],
         discount: true,
-        lang: 'EN',
+        language: 'EN',
         genre: 'classics'
     },
     {
@@ -71,7 +71,7 @@ export const database = [{
         price: 7.80,
         rating: [1, 1, 1, 1, 1],
         discount: false,
-        lang: 'BG',
+        language: 'BG',
         genre: 'classics'
     },
     {
@@ -83,7 +83,7 @@ export const database = [{
         price: 6.40,
         rating: [1, 1, 1, 1],
         discount: true,
-        lang: 'BG',
+        language: 'BG',
         genre: 'humour'
     },
     {
@@ -95,7 +95,7 @@ export const database = [{
         price: 9.10,
         rating: [1, 1, 1, 1, 1],
         discount: false,
-        lang: 'BG',
+        language: 'BG',
         genre: 'history'
     },
     {
@@ -107,7 +107,7 @@ export const database = [{
         price: 8.60,
         rating: [1, 1, 1, 1],
         discount: true,
-        lang: 'BG',
+        language: 'BG',
         genre: 'classics'
     },
     {
@@ -119,7 +119,7 @@ export const database = [{
         price: 10.50,
         rating: [1, 1, 1],
         discount: false,
-        lang: 'BG',
+        language: 'BG',
         genre: 'psychology'
     },
     {
@@ -131,7 +131,7 @@ export const database = [{
         price: 10.99,
         rating: [1, 1, 1, 1, 1],
         discount: true,
-        lang: 'FR',
+        language: 'FR',
         genre: 'classics'
     },
     {
@@ -143,7 +143,7 @@ export const database = [{
         price: 7.40,
         rating: [1, 1, 1, 1, 1],
         discount: false,
-        lang: 'FR',
+        language: 'FR',
         genre: 'classics'
     },
     {
@@ -155,7 +155,7 @@ export const database = [{
         price: 8.20,
         rating: [1, 1, 1, 1],
         discount: true,
-        lang: 'FR',
+        language: 'FR',
         genre: 'classics'
     },
     {
@@ -167,7 +167,7 @@ export const database = [{
         price: 15.60,
         rating: [1, 1, 1],
         discount: false,
-        lang: 'FR',
+        language: 'FR',
         genre: 'art'
     },
     {
@@ -179,7 +179,7 @@ export const database = [{
         price: 9.30,
         rating: [1, 1, 1, 1],
         discount: true,
-        lang: 'FR',
+        language: 'FR',
         genre: 'psychology'
     },
     {
@@ -191,7 +191,7 @@ export const database = [{
         price: 13.99,
         rating: [1, 1, 1, 1, 1],
         discount: false,
-        lang: 'EN',
+        language: 'EN',
         genre: 'psychology'
     },
     {
@@ -203,7 +203,7 @@ export const database = [{
         price: 14.20,
         rating: [1, 1, 1, 1],
         discount: true,
-        lang: 'EN',
+        language: 'EN',
         genre: 'history'
     },
     {
@@ -215,7 +215,7 @@ export const database = [{
         price: 11.00,
         rating: [1, 1, 1, 1],
         discount: false,
-        lang: 'BG',
+        language: 'BG',
         genre: 'sports'
     },
     {
@@ -227,7 +227,7 @@ export const database = [{
         price: 8.50,
         rating: [1, 1, 1, 1],
         discount: true,
-        lang: 'EN',
+        language: 'EN',
         genre: 'humour'
     },
     {
@@ -239,7 +239,7 @@ export const database = [{
         price: 12.10,
         rating: [1, 1, 1, 1],
         discount: false,
-        lang: 'FR',
+        language: 'FR',
         genre: 'sports'
     }]
 },
@@ -256,7 +256,7 @@ export const database = [{
         price: 5.99,
         rating: [1, 1, 1, 1, 1],
         discount: false,
-        lang: 'EN',
+        language: 'EN',
         genre: 'history'
     },
     {
@@ -268,7 +268,7 @@ export const database = [{
         price: 4.50,
         rating: [1, 1, 1, 1],
         discount: true,
-        lang: 'EN',
+        language: 'EN',
         genre: 'history'
     },
     {
@@ -280,7 +280,7 @@ export const database = [{
         price: 6.20,
         rating: [1, 1, 1, 1],
         discount: false,
-        lang: 'EN',
+        language: 'EN',
         genre: 'sports'
     },
     {
@@ -292,7 +292,7 @@ export const database = [{
         price: 7.00,
         rating: [1, 1, 1, 1, 1],
         discount: true,
-        lang: 'EN',
+        language: 'EN',
         genre: 'psychology'
     },
     {
@@ -304,7 +304,7 @@ export const database = [{
         price: 8.90,
         rating: [1, 1, 1],
         discount: false,
-        lang: 'EN',
+        language: 'EN',
         genre: 'art'
     },
     {
@@ -316,7 +316,7 @@ export const database = [{
         price: 4.80,
         rating: [1, 1, 1, 1, 1],
         discount: true,
-        lang: 'BG',
+        language: 'BG',
         genre: 'history'
     },
     {
@@ -328,7 +328,7 @@ export const database = [{
         price: 3.90,
         rating: [1, 1, 1, 1],
         discount: false,
-        lang: 'BG',
+        language: 'BG',
         genre: 'sports'
     },
     {
@@ -340,7 +340,7 @@ export const database = [{
         price: 5.20,
         rating: [1, 1, 1, 1],
         discount: true,
-        lang: 'BG',
+        language: 'BG',
         genre: 'psychology'
     },
     {
@@ -352,7 +352,7 @@ export const database = [{
         price: 6.10,
         rating: [1, 1, 1],
         discount: false,
-        lang: 'BG',
+        language: 'BG',
         genre: 'art'
     },
     {
@@ -364,7 +364,7 @@ export const database = [{
         price: 3.50,
         rating: [1, 1],
         discount: true,
-        lang: 'BG',
+        language: 'BG',
         genre: 'humour'
     },
     {
@@ -376,7 +376,7 @@ export const database = [{
         price: 6.40,
         rating: [1, 1, 1, 1, 1],
         discount: false,
-        lang: 'FR',
+        language: 'FR',
         genre: 'history'
     },
     {
@@ -388,7 +388,7 @@ export const database = [{
         price: 5.60,
         rating: [1, 1, 1, 1],
         discount: true,
-        lang: 'FR',
+        language: 'FR',
         genre: 'sports'
     },
     {
@@ -400,7 +400,7 @@ export const database = [{
         price: 6.80,
         rating: [1, 1, 1, 1],
         discount: false,
-        lang: 'FR',
+        language: 'FR',
         genre: 'psychology'
     },
     {
@@ -412,7 +412,7 @@ export const database = [{
         price: 7.90,
         rating: [1, 1, 1],
         discount: true,
-        lang: 'FR',
+        language: 'FR',
         genre: 'art'
     },
     {
@@ -424,7 +424,7 @@ export const database = [{
         price: 4.30,
         rating: [1, 1],
         discount: false,
-        lang: 'FR',
+        language: 'FR',
         genre: 'humour'
     },
     {
@@ -436,7 +436,7 @@ export const database = [{
         price: 6.70,
         rating: [1, 1, 1, 1],
         discount: false,
-        lang: 'EN',
+        language: 'EN',
         genre: 'history'
     },
     {
@@ -448,7 +448,7 @@ export const database = [{
         price: 8.00,
         rating: [1, 1, 1, 1, 1],
         discount: true,
-        lang: 'EN',
+        language: 'EN',
         genre: 'art'
     },
     {
@@ -460,7 +460,7 @@ export const database = [{
         price: 4.20,
         rating: [1, 1, 1],
         discount: false,
-        lang: 'BG',
+        language: 'BG',
         genre: 'sports'
     },
     {
@@ -472,7 +472,7 @@ export const database = [{
         price: 6.00,
         rating: [1, 1, 1, 1],
         discount: true,
-        lang: 'FR',
+        language: 'FR',
         genre: 'sports'
     },
     {
@@ -484,7 +484,7 @@ export const database = [{
         price: 7.10,
         rating: [1, 1, 1, 1, 1],
         discount: false,
-        lang: 'EN',
+        language: 'EN',
         genre: 'psychology'
     }]
 },
@@ -501,7 +501,7 @@ export const database = [{
         price: 24.99,
         rating: [1, 1, 1, 1, 1],
         discount: false,
-        lang: 'EN',
+        language: 'EN',
         genre: 'classics'
     },
     {
@@ -513,7 +513,7 @@ export const database = [{
         price: 19.50,
         rating: [1, 1, 1, 1],
         discount: true,
-        lang: 'EN',
+        language: 'EN',
         genre: 'classics'
     },
     {
@@ -525,7 +525,7 @@ export const database = [{
         price: 14.20,
         rating: [1, 1, 1, 1],
         discount: false,
-        lang: 'EN',
+        language: 'EN',
         genre: 'psychology'
     },
     {
@@ -537,7 +537,7 @@ export const database = [{
         price: 17.80,
         rating: [1, 1, 1],
         discount: true,
-        lang: 'EN',
+        language: 'EN',
         genre: 'art'
     },
     {
@@ -549,7 +549,7 @@ export const database = [{
         price: 16.40,
         rating: [1, 1, 1],
         discount: false,
-        lang: 'EN',
+        language: 'EN',
         genre: 'sports'
     },
     {
@@ -561,7 +561,7 @@ export const database = [{
         price: 21.30,
         rating: [1, 1, 1, 1, 1],
         discount: false,
-        lang: 'BG',
+        language: 'BG',
         genre: 'classics'
     },
     {
@@ -573,7 +573,7 @@ export const database = [{
         price: 18.60,
         rating: [1, 1, 1, 1],
         discount: true,
-        lang: 'BG',
+        language: 'BG',
         genre: 'classics'
     },
     {
@@ -585,7 +585,7 @@ export const database = [{
         price: 15.00,
         rating: [1, 1, 1, 1],
         discount: false,
-        lang: 'BG',
+        language: 'BG',
         genre: 'history'
     },
     {
@@ -597,7 +597,7 @@ export const database = [{
         price: 13.70,
         rating: [1, 1, 1],
         discount: true,
-        lang: 'BG',
+        language: 'BG',
         genre: 'psychology'
     },
     {
@@ -609,7 +609,7 @@ export const database = [{
         price: 12.40,
         rating: [1, 1],
         discount: false,
-        lang: 'BG',
+        language: 'BG',
         genre: 'sports'
     },
     {
@@ -621,7 +621,7 @@ export const database = [{
         price: 23.90,
         rating: [1, 1, 1, 1, 1],
         discount: true,
-        lang: 'FR',
+        language: 'FR',
         genre: 'classics'
     },
     {
@@ -633,7 +633,7 @@ export const database = [{
         price: 19.80,
         rating: [1, 1, 1, 1],
         discount: false,
-        lang: 'FR',
+        language: 'FR',
         genre: 'classics'
     },
     {
@@ -645,7 +645,7 @@ export const database = [{
         price: 16.50,
         rating: [1, 1, 1, 1],
         discount: true,
-        lang: 'FR',
+        language: 'FR',
         genre: 'psychology'
     },
     {
@@ -657,7 +657,7 @@ export const database = [{
         price: 18.30,
         rating: [1, 1, 1],
         discount: false,
-        lang: 'FR',
+        language: 'FR',
         genre: 'art'
     },
     {
@@ -669,7 +669,7 @@ export const database = [{
         price: 14.60,
         rating: [1, 1, 1],
         discount: true,
-        lang: 'FR',
+        language: 'FR',
         genre: 'sports'
     },
     {
@@ -681,7 +681,7 @@ export const database = [{
         price: 13.90,
         rating: [1, 1, 1, 1],
         discount: false,
-        lang: 'EN',
+        language: 'EN',
         genre: 'humour'
     },
     {
@@ -693,7 +693,7 @@ export const database = [{
         price: 17.20,
         rating: [1, 1, 1, 1, 1],
         discount: true,
-        lang: 'BG',
+        language: 'BG',
         genre: 'classics'
     },
     {
@@ -705,7 +705,7 @@ export const database = [{
         price: 20.40,
         rating: [1, 1, 1, 1],
         discount: false,
-        lang: 'FR',
+        language: 'FR',
         genre: 'history'
     },
     {
@@ -717,7 +717,7 @@ export const database = [{
         price: 18.90,
         rating: [1, 1, 1, 1],
         discount: true,
-        lang: 'EN',
+        language: 'EN',
         genre: 'history'
     },
     {
@@ -729,7 +729,7 @@ export const database = [{
         price: 11.50,
         rating: [1, 1],
         discount: false,
-        lang: 'BG',
+        language: 'BG',
         genre: 'humour'
     }
     ]
