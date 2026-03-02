@@ -1,8 +1,12 @@
 import styles from './LoadMoreButton.module.scss';
 
-export const LoadMoreButton = () => {
-    
+export const LoadMoreButton = ({ loadMoreItemsHandler }) => {
+
     return (
-        <button>Load more</button>
+        <button
+            onClick={loadMoreItemsHandler}
+        >
+            Load more
+        </button>
     )
 }
