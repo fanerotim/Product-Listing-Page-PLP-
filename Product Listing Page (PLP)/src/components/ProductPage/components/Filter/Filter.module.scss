@@ -1,5 +1,6 @@
 .filter__group__container {
-
+    // TODO: consider testing this property
+    max-width: 200px;
 }
 
 .filter__group__container__label {
@@ -24,6 +25,14 @@
 
         &:hover {
             background-color: rgb(204, 204, 204);
+        }
+
+        &__selected {
+            background-color: rgb(198, 198, 198);
+
+            &:hover {
+                background-color: none;
+            }
         }
     }
 }
