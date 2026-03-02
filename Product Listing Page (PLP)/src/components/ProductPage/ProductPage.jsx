@@ -10,6 +10,7 @@ import { useFilterState } from './components/hooks/useFilterState';
 import { useFilterItems } from './components/hooks/useFilterItems';
 import { useSortState } from './components/hooks/useSortState';
 import { useSortItems } from './components/hooks/useSortItems';
+import { usePaginate } from './components/hooks/usePaginate';
 
 
 export const ProductPage = ({ activeCategory }) => {
@@ -22,16 +23,19 @@ export const ProductPage = ({ activeCategory }) => {
     const { sortValue, sortValueHandler } = useSortState();
     const sortedItems = useSortItems(sortValue, filteredItems);
 
+    const { itemsCount, loadMoreItemsHandler } = usePaginate(sortedItems, activeCategory);
+    const visibleItems = sortedItems.slice(0, itemsCount);
+
     return (
 
         <div className={styles.product__page__wrapper}>
 
             <article
                 className={styles.product__page__filter__container}>
-                <Filter 
-                    filterState={filterState} 
-                    filterStateHandler={filterStateHandler} 
-                    clearFiltersHandler={clearFiltersHandler}    
+                <Filter
+                    filterState={filterState}
+                    filterStateHandler={filterStateHandler}
+                    clearFiltersHandler={clearFiltersHandler}
                 />
             </article>
 
@@ -56,15 +60,15 @@ export const ProductPage = ({ activeCategory }) => {
 
             <div className={styles.product__page__product__container}>
                 {
-                    sortedItems.length > 0
+                    visibleItems.length > 0
                         ?
-                        sortedItems.map((p) => {
+                        visibleItems.map((p) => {
                             return (
                                 <ProductItem key={p.id} product={p} />
                             )
                         })
                         :
-                        <div 
+                        <div
                             className={styles.product__page__product__container__no__match__container}
                         >
                             <h1>
@@ -77,7 +81,9 @@ export const ProductPage = ({ activeCategory }) => {
             <div
                 className={styles.product__page__load__more__btn__container}
             >
-                <LoadMoreButton/>
+                <LoadMoreButton 
+                    loadMoreItemsHandler={loadMoreItemsHandler}
+                />
             </div>
 
         </div>
