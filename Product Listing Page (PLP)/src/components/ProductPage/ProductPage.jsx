@@ -5,16 +5,21 @@ import { ProductItem } from "./components/ProductItem/ProductItem";
 import { Filter } from './components/Filter/Filter';
 import { Sort } from './components/Sort/Sort';
 import { ProductCounter } from './components/ProductCounter/ProductCounter';
+import { useFilterState } from './components/hooks/useFilterState';
+import { useFilterItems } from './components/hooks/useFilterItems';
 import { useSortState } from './components/hooks/useSortState';
 import { useSortItems } from './components/hooks/useSortItems';
-import { useFilterState } from './components/hooks/useFilterState';
+
 
 export const ProductPage = ({ activeCategory }) => {
 
     const products = database.filter((p) => p.category === activeCategory);
+
+    const { filterState, filterStateHandler } = useFilterState();
+    const filteredItems = useFilterItems(filterState, products[0].items);
+
     const { sortValue, sortValueHandler } = useSortState();
     const sortedItems = useSortItems(sortValue, products[0].items);
-    const { filterState, filterStateHandler } = useFilterState();
 
     return (
 
