@@ -5,6 +5,7 @@ import { ProductItem } from "./components/ProductItem/ProductItem";
 import { Filter } from './components/Filter/Filter';
 import { Sort } from './components/Sort/Sort';
 import { ProductCounter } from './components/ProductCounter/ProductCounter';
+import { LoadMoreButton } from './components/LoadMoreButton/LoadMoreButton';
 import { useFilterState } from './components/hooks/useFilterState';
 import { useFilterItems } from './components/hooks/useFilterItems';
 import { useSortState } from './components/hooks/useSortState';
@@ -74,9 +75,9 @@ export const ProductPage = ({ activeCategory }) => {
             </div>
 
             <div
-                className={styles.product__page__load__more__btn}
+                className={styles.product__page__load__more__btn__container}
             >
-                <button>Load more</button>
+                <LoadMoreButton/>
             </div>
 
         </div>
