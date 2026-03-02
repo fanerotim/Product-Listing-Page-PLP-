@@ -36,3 +36,11 @@
         }
     }
 }
+
+.clear__filters__btn {
+    all: unset;
+    padding: .2rem .5rem;
+    outline: 1px solid rgba(66, 66, 66, 0.2);
+    font-size: .9rem;
+    cursor: pointer;
+}
