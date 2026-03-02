@@ -29,4 +29,5 @@ export const useFilterItems = (filterState, items) => {
         }
         return true;
     })
+    return filteredItems;
 }

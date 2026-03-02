@@ -19,7 +19,7 @@ export const ProductPage = ({ activeCategory }) => {
     const filteredItems = useFilterItems(filterState, products[0].items);
 
     const { sortValue, sortValueHandler } = useSortState();
-    const sortedItems = useSortItems(sortValue, products[0].items);
+    const sortedItems = useSortItems(sortValue, filteredItems);
 
     return (
 
@@ -27,7 +27,7 @@ export const ProductPage = ({ activeCategory }) => {
 
             <article
                 className={styles.product__page__filter__container}>
-                <Filter filterState={filterState} filterStateHandler={filterStateHandler}/>
+                <Filter filterState={filterState} filterStateHandler={filterStateHandler} />
             </article>
 
             <article
@@ -50,11 +50,17 @@ export const ProductPage = ({ activeCategory }) => {
             </article>
 
             <div className={styles.product__page__product__container}>
-                {sortedItems.map((p) => {
-                    return (
-                        <ProductItem key={p.id} product={p} />
-                    )
-                })}
+                {
+                    sortedItems.length > 0
+                        ?
+                        sortedItems.map((p) => {
+                            return (
+                                <ProductItem key={p.id} product={p} />
+                            )
+                        })
+                        :
+                        <h1>No items found!</h1>
+                }
             </div>
 
             <div
