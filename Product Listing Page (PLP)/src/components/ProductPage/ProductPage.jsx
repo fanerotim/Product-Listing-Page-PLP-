@@ -25,6 +25,7 @@ export const ProductPage = ({ activeCategory }) => {
 
     const { itemsCount, loadMoreItemsHandler } = usePaginate(sortedItems, activeCategory);
     const visibleItems = sortedItems.slice(0, itemsCount);
+    const hasNoMoreItems = visibleItems.length >= sortedItems.length;
 
     return (
 
@@ -83,6 +84,7 @@ export const ProductPage = ({ activeCategory }) => {
             >
                 <LoadMoreButton 
                     loadMoreItemsHandler={loadMoreItemsHandler}
+                    hasNoMoreItems={hasNoMoreItems}
                 />
             </div>
 
