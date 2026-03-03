@@ -15,7 +15,7 @@ function App() {
   return (
     <>
       <div className={styles.app__container}>
-        <Header handleChangeCategory={handleChangeCategory} />
+        <Header handleChangeCategory={handleChangeCategory} activeCategory={activeCategory} />
         <ProductPage activeCategory={activeCategory} />
         <Footer />
       </div>
