@@ -22,7 +22,7 @@ export const ProductItem = ({ product }) => {
             <p
                 className={styles.product__card__description}
             >
-                {description}
+                {description.length > 15 ? description.substring(0, 60) + '...' : description}
             </p>
 
             {discount

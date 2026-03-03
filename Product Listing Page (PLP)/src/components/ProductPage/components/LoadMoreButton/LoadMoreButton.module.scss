@@ -1,0 +1,26 @@
+@import url('../../../../App.module.scss');
+
+.load__more__button {
+    margin: 2rem 0;
+    border: none;
+    background-color: white;
+    cursor: pointer;
+    padding: .6rem 1.3rem;
+    width: 150px;
+    outline: 1px solid rgba(66, 66, 66, 0.2);
+    font-size: .9rem;
+    text-align: center;
+    transition: var(--hover--transition);
+
+    &:disabled {
+        outline: 1px solid rgba(66, 66, 66, 0.2);
+        background-color: rgb(234, 234, 234);
+        cursor: default;
+    }
+
+    &:hover:not(:disabled) {
+        background-color: var(--hover--bg--color);
+        color: var(--hover--color);
+        transition: var(--hover--transition);
+    }
+}
