@@ -1,3 +1,5 @@
+@import url('../../../../App.module.scss');
+
 .filter__group__container {
     // TODO: consider testing this property
     max-width: 200px;
@@ -22,17 +24,17 @@
         outline: 1px solid rgba(66, 66, 66, 0.2);
         font-size: .9rem;
         cursor: pointer;
+        transition: var(--hover--transition);
 
         &:hover {
-            background-color: rgb(204, 204, 204);
+            background-color: var(--hover--bg--color);
+            color: var(--hover--color);
+            transition: var(--hover--transition);
         }
 
         &__selected {
-            background-color: rgb(198, 198, 198);
-
-            &:hover {
-                background-color: none;
-            }
+            background-color: var(--hover--bg--color);
+            color: var(--hover--color);
         }
     }
 }
