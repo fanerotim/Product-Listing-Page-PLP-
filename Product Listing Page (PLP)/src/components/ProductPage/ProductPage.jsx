@@ -43,7 +43,10 @@ export const ProductPage = ({ activeCategory }) => {
             <article
                 className={styles.product__page__product__counter__container}
             >
-                <ProductCounter />
+                <ProductCounter 
+                    visibleItems={visibleItems.length}
+                    totalItems={sortedItems.length}
+                />
             </article>
 
             <article
