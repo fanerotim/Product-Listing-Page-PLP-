@@ -27,6 +27,8 @@
     left: 0;
     right: 0;
     height: 0;
+    // z-index keeps it below Header
+    z-index: 60;
     // overflow-y: scroll;
     opacity: 0;
     visibility: hidden;

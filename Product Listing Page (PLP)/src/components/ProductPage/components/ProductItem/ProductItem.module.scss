@@ -10,6 +10,7 @@
     padding: 1.2rem 1.7rem;
     transition: background-color .5s;
     list-style-type: none;
+    // careful with this position; caused sort component to go below the item card
     position: relative;
 
     // &:hover {
