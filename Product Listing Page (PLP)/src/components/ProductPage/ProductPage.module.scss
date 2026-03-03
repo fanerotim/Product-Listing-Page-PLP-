@@ -1,12 +1,12 @@
 .product__page__wrapper {
     // this margin-top offsets Header height;
-    margin-top: 4rem;
-
+    margin: 4rem auto;
+    max-width: 1200px;
     display: grid;
-    grid-template-columns: auto 1fr auto;
+    grid-template-columns: auto 1fr; // removed third column; think if we will need it
     grid-template-rows: auto auto 1fr auto;
     gap: 1rem;
-    padding: 2rem;
+    padding: 2rem; 
 }
 
 .product__page__filter__container {
@@ -41,16 +41,17 @@
 }
 
 .product__page__sort__container {
-    // align-self: end;
-    grid-column: 3 / 4;
+    align-self: end;
+    justify-self: end;
+    grid-column: 2 / 3;
     grid-row: 2 / 3;
 }
 
 .product__page__product__counter__container {
     grid-column: 2 / 3;
     grid-row: 2 / 3;
-    justify-self: end;
-    // align-self: end;
+    align-self: end;
+    justify-self: start;
 }
 
 .product__page__product__container {
@@ -59,6 +60,7 @@
 
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-evenly;
     gap: 1rem;
 
     &__no__match__container {
