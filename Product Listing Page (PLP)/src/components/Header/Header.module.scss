@@ -2,10 +2,11 @@
     position: fixed;
     top: 0;
     width: 100vw;
-    background-color: rgb(240, 240, 240);
+    background-color: rgb(255, 251, 251);
     // make sure this stays on top of everything
     z-index: 150;
     padding: 2rem 2.5rem;
+    border-bottom: 1px solid rgb(12, 12, 12, .3);
 
     &__nav__and__logo__container {
         max-width: 1200px;
