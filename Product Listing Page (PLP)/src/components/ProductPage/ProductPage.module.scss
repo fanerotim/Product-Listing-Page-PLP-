@@ -1,12 +1,12 @@
 .product__page__wrapper {
     // this margin-top offsets Header height;
-    margin: 4rem auto;
+    margin: 6rem auto 0 auto;
     max-width: 1200px;
     display: grid;
     grid-template-columns: auto 1fr; // removed third column; think if we will need it
     grid-template-rows: auto auto 1fr auto;
     gap: 1rem;
-    padding: 2rem; 
+    padding: 3rem; 
 }
 
 .product__page__filter__container {
