@@ -1,7 +1,7 @@
 import styles from './ProductCounter.module.scss';
 
-export const ProductCounter = ({visibleItems, totalItems}) => {   
+export const ProductCounter = ({visibleItemsCount, totalItemsCount}) => {   
     return (
-        <h4>{visibleItems} out of {totalItems}</h4>
+        <h4>{visibleItemsCount} out of {totalItemsCount}</h4>
     )
 }
