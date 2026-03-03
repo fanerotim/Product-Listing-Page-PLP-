@@ -1,6 +1,7 @@
 :root {
   --hover--bg--color: rgb(53, 53, 53);
   --hover--color: white;
+  --hover--transition: background-color .2s, color .2s;
 }
 
 * {
