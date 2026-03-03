@@ -52,8 +52,16 @@ export const ProductPage = ({ activeCategory }) => {
             <article
                 className={styles.product__page__category__description__container}
             >
-                <h1>{activeCategory}</h1>
-                <p>{products[0].description}</p>
+                <h1
+                    className={styles.product__page__category__description__container__heading}
+                    >
+                        {activeCategory}
+                </h1>
+                <p
+                    className={styles.product__page__category__description__container__description}
+                >
+                    {products[0].description}
+                </p>
             </article>
 
             <article
