@@ -5,51 +5,53 @@ export const Filter = ({ filterState, filterStateHandler, clearFiltersHandler })
 
     // TODO: consider adding aria-pressed attribute
     return (
-        <>
-            <h3>Filter</h3>
-            <div
-            // className={styles.filter__container}
+        <section
+            className={styles.filter__element__container}
+        >
+            <h3
+                className={styles.filter__element__container__heading}
             >
-                {filterOptions.map((filter) => (
-                    <article
-                        className={styles.filter__group__container}
-                        key={filter.id}
-                    >
-                        <h4
-                            className={styles.filter__group__container__label}
-                        >
-                            {filter.label}
-                        </h4>
+                Filters
+            </h3>
 
-                        <div
-                            className={styles.filter__group__options__container}
-                        >
-                            {filter.options.map((option, i) => (
-                                <button
-                                    key={option.value}
-                                    onClick={() => filterStateHandler(filter.value, option.value)}
-                                    className={`
+            {filterOptions.map((filter) => (
+                <article
+                    className={styles.filter__group__container}
+                    key={filter.id}
+                >
+                    <h4
+                        className={styles.filter__group__container__label}
+                    >
+                        {filter.label}
+                    </h4>
+
+                    <div
+                        className={styles.filter__group__options__container}
+                    >
+                        {filter.options.map((option, i) => (
+                            <button
+                                key={option.value}
+                                onClick={() => filterStateHandler(filter.value, option.value)}
+                                className={`
                                         ${styles.filter__group__options__container__option}
                                         ${filterState[filter.value] === option.value ? styles.filter__group__options__container__option__selected : ''}
                                         `}
-                                >
-                                    {option.label}
-                                </button>
-                            ))}
+                            >
+                                {option.label}
+                            </button>
+                        ))}
 
-                        </div>
+                    </div>
 
-                    </article>
-                ))}
+                </article>
+            ))}
 
-                <button
-                    onClick={clearFiltersHandler}
-                    className={styles.clear__filters__btn}
-                >
-                    Reset filters
-                </button>
-
-            </div>
-        </>
+            <button
+                onClick={clearFiltersHandler}
+                className={styles.filter__element__container__clear__filters__btn}
+            >
+                Reset all filters
+            </button>
+        </section>
     )
 }
