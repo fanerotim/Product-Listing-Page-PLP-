@@ -10,6 +10,7 @@
     padding: 1.2rem 1.7rem;
     transition: background-color .5s;
     list-style-type: none;
+    position: relative;
 
     // &:hover {
     //     cursor: pointer;
@@ -37,5 +38,12 @@
 
     &__add__to__cart__btn:hover {
         cursor: pointer;
+    }
+
+    &__item__added__modal__container {
+        position: absolute;
+        left: 50px;
+        top: 150px;
+        z-index: 20;
     }
 }

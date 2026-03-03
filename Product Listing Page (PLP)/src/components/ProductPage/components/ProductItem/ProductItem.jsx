@@ -1,9 +1,12 @@
 import styles from './ProductItem.module.scss';
 import { CiStar } from 'react-icons/ci';
+import { useAddToCartState } from './hooks/useAddToCartState';
+import { ItemAddedModal } from './components/ItemAddedModal';
 
 export const ProductItem = ({ product }) => {
 
     const { imageUrl, description, name, price, rating, discount } = product;
+    const { isVisible, addToCartHandler } = useAddToCartState();
 
     return (
         <article className={styles.product__card}>
@@ -53,7 +56,19 @@ export const ProductItem = ({ product }) => {
                 ))}
             </p>
 
-            <button className={styles.product__card__add__to__cart__btn}>
+
+            <div
+                className={styles.product__card__item__added__modal__container}
+            >
+                {isVisible && <ItemAddedModal />}
+
+            </div>
+
+            <button
+                className={styles.product__card__add__to__cart__btn}
+                onClick={addToCartHandler}
+                disabled={isVisible}
+            >
                 Add to cart
             </button>
         </article>
