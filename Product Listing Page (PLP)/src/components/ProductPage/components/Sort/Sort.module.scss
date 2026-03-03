@@ -1,3 +1,5 @@
+@import url('../../../../App.module.scss');
+
 .sort__option__container {
     --arrow-color: rgb(94, 94, 94);
     --arrow-size: .6rem;
@@ -90,18 +92,19 @@
         transition: background-color .2s, color .2s;
 
         &:hover {
-            background-color: rgb(53, 53, 53);
-            color: white;
+            // those styles are defined in App.module.scss
+            background-color: var(--hover--bg--color);
+            color: var(--hover--color);
             transition: background-color .2s, color .2s;
         }
 
         &__selected {
-            background-color: rgb(53, 53, 53);
-            color: white;
+            background-color: var(--hover--bg--color);
+            color: var(--hover--color);
 
             &:hover {
-                background-color: rgb(53, 53, 53);
-                color: white;
+                background-color: var(--hover--bg--color);
+                color: var(--hover--color);
             }
         }
     }
