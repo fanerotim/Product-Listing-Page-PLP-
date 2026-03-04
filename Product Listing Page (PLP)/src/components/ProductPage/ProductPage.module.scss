@@ -92,6 +92,25 @@
 
     .product__page__wrapper {
         grid-template-rows: minmax(100px, 250px) auto auto 1fr auto;
+        padding: 1rem;
+        margin-top: 8rem;
+    }
+
+    .product__page__category__description__container {
+        row-gap: .5rem;
+        justify-content: center;
+        align-items: center;
+
+        &__heading {
+            font-size: 2.5rem;
+            font-weight: 800;
+        }
+
+        &__description {
+            font-size: .9rem;
+            font-weight: 400;
+            text-align: center;
+        }
     }
 
     .product__page__filter__container {
@@ -122,6 +141,8 @@
         width: 100vw;
         background-color: white;
         z-index: 500;
+        overflow-y: auto;
+        padding: 2rem;
 
         &__closed {
             transform: translateX(-100%);
