@@ -48,8 +48,6 @@ export const ProductPage = ({ activeCategory }) => {
                 />
             </div>
 
-
-
             <article
                 className={`
                     ${styles.product__page__filter__container}
