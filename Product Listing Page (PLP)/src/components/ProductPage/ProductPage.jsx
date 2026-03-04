@@ -1,5 +1,6 @@
 import styles from './ProductPage.module.scss';
 import { database } from "../../../database/database";
+import { FaFilter } from "react-icons/fa";
 
 import { ProductItem } from "./components/ProductItem/ProductItem";
 import { Filter } from './components/Filter/Filter';
@@ -11,7 +12,7 @@ import { useFilterItems } from './components/hooks/useFilterItems';
 import { useSortState } from './components/hooks/useSortState';
 import { useSortItems } from './components/hooks/useSortItems';
 import { usePaginate } from './components/hooks/usePaginate';
-
+import { useIsFiltersOpen } from './components/hooks/is-filters-open-state/useIsFiltersOpen';
 
 export const ProductPage = ({ activeCategory }) => {
 
@@ -27,23 +28,48 @@ export const ProductPage = ({ activeCategory }) => {
     const visibleItems = sortedItems.slice(0, itemsCount);
     const hasNoMoreItems = visibleItems.length >= sortedItems.length;
 
+    const { isFiltersOpen, isFiltersOpenHandler } = useIsFiltersOpen();
+
     return (
 
         <div className={styles.product__page__wrapper}>
 
+            <div
+                className={styles.mobile__filter__element__container}
+                onClick={isFiltersOpenHandler}
+            >
+                <button
+                    className={styles.mobile__filter__element__container__button}
+                >
+                    Filters
+                </button>
+                <FaFilter 
+                    className={styles.mobile__filter__element__container__icon}
+                />
+            </div>
+
+
+
             <article
-                className={styles.product__page__filter__container}>
+                className={`
+                    ${styles.product__page__filter__container}
+                    ${isFiltersOpen
+                        ? styles.product__page__filter__container__open
+                        : styles.product__page__filter__container__closed}    
+                    `}>
                 <Filter
                     filterState={filterState}
                     filterStateHandler={filterStateHandler}
                     clearFiltersHandler={clearFiltersHandler}
+                    isFiltersOpen={isFiltersOpen}
+                    isFiltersOpenHandler={isFiltersOpenHandler}
                 />
             </article>
 
             <article
                 className={styles.product__page__product__counter__container}
             >
-                <ProductCounter 
+                <ProductCounter
                     visibleItemsCount={visibleItems.length}
                     totalItemsCount={sortedItems.length}
                 />
@@ -54,8 +80,8 @@ export const ProductPage = ({ activeCategory }) => {
             >
                 <h1
                     className={styles.product__page__category__description__container__heading}
-                    >
-                        {activeCategory}
+                >
+                    {activeCategory}
                 </h1>
                 <p
                     className={styles.product__page__category__description__container__description}
@@ -83,9 +109,11 @@ export const ProductPage = ({ activeCategory }) => {
                         <div
                             className={styles.product__page__product__container__no__match__container}
                         >
-                            <h1>
-                                No items found!
-                            </h1>
+                            <p
+                                className={styles.product__page__product__container__no__match__container__text}
+                            >
+                                No products match your filters. Try adjusting them to see more results.
+                            </p>
                         </div>
                 }
             </div>
@@ -93,7 +121,7 @@ export const ProductPage = ({ activeCategory }) => {
             <div
                 className={styles.product__page__load__more__btn__container}
             >
-                <LoadMoreButton 
+                <LoadMoreButton
                     loadMoreItemsHandler={loadMoreItemsHandler}
                     hasNoMoreItems={hasNoMoreItems}
                 />
