@@ -1,18 +1,34 @@
 import styles from './Filter.module.scss';
 import { filterOptions } from './utils/filterOptions';
+import { RiCloseLargeFill } from "react-icons/ri";
 
-export const Filter = ({ filterState, filterStateHandler, clearFiltersHandler }) => {
+export const Filter = ({
+    filterState,
+    filterStateHandler,
+    clearFiltersHandler,
+    isFiltersOpen,
+    isFiltersOpenHandler }) => {
 
     // TODO: consider adding aria-pressed attribute
     return (
         <section
             className={styles.filter__element__container}
         >
+
             <h3
                 className={styles.filter__element__container__heading}
             >
                 Filters
             </h3>
+
+            {
+                isFiltersOpen &&
+                <button
+                    onClick={isFiltersOpenHandler}
+                    className={styles.filter__element__container__close__filters__button}
+                >
+                    <RiCloseLargeFill />
+                </button>}
 
             {filterOptions.map((filter) => (
                 <article
