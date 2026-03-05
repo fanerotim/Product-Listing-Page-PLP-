@@ -2,13 +2,19 @@
 
 ### Project Summary
 
-This is a fully responsive small Project Listing Page demo, similar to what we can see on eCommerce webstites.
+This is a fully responsive *Project Listing Page* demo, similar to what we can see on eCommerce webstites.
 
 
 ## Technical Stack
 - Frontend: React (v19.2)
-- Modular SCSS
-- Database: sample static data; array with objects
+- Custom Modular SCSS styles
+- Database: sample / static data
+
+Data objects are in this shape:
+
+<img width="1724" height="1088" alt="image" src="https://github.com/user-attachments/assets/2ed8c076-b5be-4766-9338-02abc3502a15" />
+
+
 
 ## Architecture
 
