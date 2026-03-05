@@ -4,6 +4,11 @@
 
 This is a fully responsive *Project Listing Page* demo, similar to what we can see on eCommerce webstites.
 
+App URL: https://fanerotim-chapter.netlify.app/
+
+To start the app locally run the following command inside 'Product Listing Page (PLP)' directory:
+
+npm run dev
 
 ## Technical Stack
 - Frontend: React (v19.2)
