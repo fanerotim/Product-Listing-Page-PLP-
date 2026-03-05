@@ -5,7 +5,6 @@ import { ProductPage } from './components/ProductPage/ProductPage';
 import { useState } from 'react';
 
 function App() {
-
   const [activeCategory, setActiveCategory] = useState('books');
 
   const handleChangeCategory = (category) => {

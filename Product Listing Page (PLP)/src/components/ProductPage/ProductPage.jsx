@@ -43,7 +43,7 @@ export const ProductPage = ({ activeCategory }) => {
                 >
                     Filters
                 </button>
-                <FaFilter 
+                <FaFilter
                     className={styles.mobile__filter__element__container__icon}
                 />
             </div>
@@ -51,10 +51,13 @@ export const ProductPage = ({ activeCategory }) => {
             <article
                 className={`
                     ${styles.product__page__filter__container}
+                    ${styles.product__page__filter__container__small}
                     ${isFiltersOpen
-                        ? styles.product__page__filter__container__open
-                        : styles.product__page__filter__container__closed}    
-                    `}>
+                        ? styles.product__page__filter__container__small__open
+                        : styles.product__page__filter__container__small__closed}    
+                    `
+                }
+            >
                 <Filter
                     filterState={filterState}
                     filterStateHandler={filterStateHandler}
