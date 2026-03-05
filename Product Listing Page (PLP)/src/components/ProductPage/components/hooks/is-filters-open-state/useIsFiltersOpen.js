@@ -15,6 +15,18 @@ export const useIsFiltersOpen = () => {
             document.body.style.overflow = 'auto';
         }
 
+        // make sure filter state is set to close when browser window is greater than 700px to avoid seeing elements ftom mobile filter menu
+        const handleResize = () => {
+
+            if (window.innerWidth > 700 && isFiltersOpen) {
+                isFiltersOpenHandler();
+            }
+        };
+
+        window.addEventListener("resize", handleResize);
+
+        return () => window.removeEventListener("resize", handleResize);
+
     }, [isFiltersOpen])
 
     const isFiltersOpenHandler = () => {
